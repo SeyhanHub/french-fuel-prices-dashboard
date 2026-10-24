@@ -137,7 +137,7 @@ Finally, the events on the charts give context but are not proof of what caused 
 
 ## Links
 
-Demo video: https://youtu.be/KKEq2rhbJL4
+Demo video: https://youtu.be/2S74qZ4CruY
 
 Repository: https://github.com/SeyhanHub/french-fuel-prices-dashboard
 
