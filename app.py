@@ -4,6 +4,7 @@ Run with: streamlit run app.py
 """
 from __future__ import annotations
 
+import base64
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -51,7 +52,10 @@ def sidebar_footer():
     st.divider()
     st.markdown(f"**{tr('Course', 'Cours')}:** {COURSE['name']}  \n"
                 f"**Prof.** [{COURSE['prof']}]({COURSE['linkedin']})")
-    st.image(str(ROOT / "assets" / "efrei_logo.png"), width="stretch")
+    # embedded as base64 because st.image files sometimes fail to load on Streamlit Cloud
+    logo = base64.b64encode((ROOT / "assets" / "efrei_logo.png").read_bytes()).decode()
+    st.markdown(f'<img src="data:image/png;base64,{logo}" alt="EFREI logo" style="width:100%">',
+                unsafe_allow_html=True)
 
 
 def sidebar(tables: dict) -> Filters:
