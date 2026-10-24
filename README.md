@@ -141,7 +141,7 @@ Demo video: https://youtu.be/2S74qZ4CruY
 
 Repository: https://github.com/SeyhanHub/french-fuel-prices-dashboard
 
-Deployed app: to be added.
+Deployed app: https://fuel-prices-kara.streamlit.app/
 
 ## Licences
 
